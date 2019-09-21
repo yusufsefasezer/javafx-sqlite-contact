@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+    <items>
+        <AnchorPane prefWidth="200.0">
+            <children>
+                <TitledPane collapsible="false" prefHeight="200.0" prefWidth="200.0" text="Contacts" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <content>
+                        <ListView fx:id="listViewContactList" prefWidth="200.0" />
+                    </content>
+                </TitledPane>
+            </children>
+        </AnchorPane>
+        <AnchorPane minWidth="0.0" prefWidth="100.0">
+            <children>
+                <TitledPane collapsible="false" prefHeight="200.0" prefWidth="200.0" text="Contact Information" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <content>
+                        <GridPane>
+                            <columnConstraints>
+                                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" />
+                                <ColumnConstraints hgrow="SOMETIMES" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints vgrow="SOMETIMES" />
+                                <RowConstraints vgrow="SOMETIMES" />
+                                <RowConstraints vgrow="SOMETIMES" />
+                                <RowConstraints vgrow="SOMETIMES" />
+                                <RowConstraints vgrow="SOMETIMES" />
+                                <RowConstraints prefHeight="50.0" vgrow="SOMETIMES" />
+                                <RowConstraints prefHeight="50.0" vgrow="SOMETIMES" />
+                                <RowConstraints vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                
+                                <Label text="First Name:">
+                                    <GridPane.margin>
+                                        <Insets right="5.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <TextField fx:id="textFieldFirstName" GridPane.columnIndex="1" />
+                                
+                                <Label text="Last Name:" GridPane.rowIndex="1">
+                                    <GridPane.margin>
+                                        <Insets right="5.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <TextField fx:id="textFieldLastName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                
+                                <Label text="E-mail:" GridPane.rowIndex="2">
+                                    <GridPane.margin>
+                                        <Insets right="5.0" />
+                                    </GridPane.margin>
+                                </Label>                        
+                                <TextField fx:id="textFieldEmail" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                
+                                <Label text="Phone Number:" GridPane.rowIndex="3">
+                                    <GridPane.margin>
+                                        <Insets right="5.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <TextField fx:id="textFieldPhoneNumber" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                
+                                <Label text="Web Address:" GridPane.rowIndex="4">
+                                    <GridPane.margin>
+                                        <Insets right="5.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <TextField fx:id="textFieldWebAddress" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                
+                                <Label alignment="TOP_LEFT" text="Address:" GridPane.rowIndex="5" GridPane.valignment="TOP">
+                                    <GridPane.margin>
+                                        <Insets right="5.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <TextArea fx:id="textAreaAddress" prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                    <GridPane.margin>
+                                        <Insets bottom="5.0" top="5.0" />
+                                    </GridPane.margin>
+                                </TextArea>
+                                
+                                <Label text="Notes:" GridPane.rowIndex="6" GridPane.valignment="TOP">
+                                    <GridPane.margin>
+                                        <Insets right="5.0" />
+                                    </GridPane.margin>
+                                </Label>                               
+                                <TextArea fx:id="textAreaNotes" prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                    <GridPane.margin>
+                                        <Insets top="5.0" />
+                                    </GridPane.margin>
+                                </TextArea>
+                                
+                                <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                    <buttons>
+                                        <Button fx:id="buttonAdd" mnemonicParsing="false" onAction="#addContact" text="Add" />
+                                        <Button fx:id="buttonUpdate" mnemonicParsing="false" onAction="#updateContact" text="Update" />
+                                        <Button fx:id="buttonRemove" mnemonicParsing="false" onAction="#removeContact" text="Remove" />
+                                    </buttons>
+                                </ButtonBar>
+                            </children>
+                        </GridPane>
+                    </content>
+                </TitledPane>
+            </children>
+        </AnchorPane>
+    </items>
+</SplitPane>
