@@ -1,3 +1,11 @@
+---
+title: Hello World
+#tags: [Software Development]
+style: fill
+color: light
+description: This article will be written
+---
+
 # Java FX SQLite Contact
 A simple SQLite contact list application developed with FX and Java.
 
