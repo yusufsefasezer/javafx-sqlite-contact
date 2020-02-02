@@ -1,7 +1,3 @@
----
-title: Hello World
----
-
 # Java FX SQLite Contact
 A simple SQLite contact list application developed with FX and Java.
 
