@@ -2,8 +2,10 @@ package com.yusufsezer;
 
 import com.yusufsezer.contract.IRepository;
 import com.yusufsezer.controller.ContactController;
-import com.yusufsezer.repository.SQLiteRepository;
+import com.yusufsezer.repository.ContactRepository;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.DriverManager;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
 import javafx.fxml.FXMLLoader;
@@ -27,7 +29,8 @@ public class App {
 
             // repository
             String dbURL = "jdbc:sqlite:contacts.db";
-            IRepository repository = new SQLiteRepository(dbURL);
+            Connection connection = DriverManager.getConnection(dbURL);
+            IRepository repository = new ContactRepository(connection);
 
             // controller
             ContactController controller = new ContactController(repository);

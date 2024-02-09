@@ -14,7 +14,7 @@ import javafx.scene.control.TextField;
 
 public class ContactController implements Initializable {
 
-    private final IRepository<Contact, Integer> contactRepository;
+    private final IRepository<Contact, Long> contactRepository;
 
     @FXML
     private ListView<Contact> listViewContactList;
@@ -25,7 +25,7 @@ public class ContactController implements Initializable {
     @FXML
     private TextArea textAreaAddress, textAreaNotes;
 
-    public ContactController(IRepository<Contact, Integer> repository) {
+    public ContactController(IRepository<Contact, Long> repository) {
         this.contactRepository = repository;
     }
 
@@ -75,7 +75,7 @@ public class ContactController implements Initializable {
         selectedContact.setAddress(textAreaAddress.getText());
         selectedContact.setWebAddress(textFieldWebAddress.getText());
         selectedContact.setNotes(textAreaNotes.getText());
-        int contactId = selectedContact.getId();
+        long contactId = selectedContact.getId();
         contactRepository.update(contactId, selectedContact);
         fillListItems();
         clearInput();
@@ -87,7 +87,7 @@ public class ContactController implements Initializable {
         if (selectedContact == null) {
             return;
         }
-        int contactId = selectedContact.getId();
+        long contactId = selectedContact.getId();
         contactRepository.remove(contactId);
         fillListItems();
         clearInput();

@@ -12,15 +12,16 @@ public class Contact implements Serializable {
     public final static String ADDRESS = "address";
     public final static String WEB_ADDRESS = "webAddress";
     public final static String NOTES = "notes";
+    public final static Contact EMPTY = Contact.of("", "", "", "", "", "", "");
 
-    public int id;
-    public String firstName;
-    public String lastName;
-    public String email;
-    public String phoneNumber;
-    public String address;
-    public String webAddress;
-    public String notes;
+    protected long id;
+    protected String firstName;
+    protected String lastName;
+    protected String email;
+    protected String phoneNumber;
+    protected String address;
+    protected String webAddress;
+    protected String notes;
 
     public Contact() {
     }
@@ -37,11 +38,11 @@ public class Contact implements Serializable {
         this.notes = notes;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
