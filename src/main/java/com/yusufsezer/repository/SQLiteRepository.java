@@ -101,13 +101,13 @@ public class SQLiteRepository<T, I extends Number> implements IRepository<T, I> 
         T updatedItem = get(index);
         Contact contact = (Contact) obj;
         String query = String.format("UPDATE contacts SET "
-                + "firstName = '%s', "
-                + "lastName = '%s', "
-                + "email = '%s', "
-                + "phoneNumber = '%s', "
-                + "address = '%s', "
-                + "webAddress = '%s', "
-                + "notes = '%s' "
+                + Contact.FIRST_NAME + " = '%s', "
+                + Contact.LAST_NAME + " = '%s', "
+                + Contact.EMAIL + " = '%s', "
+                + Contact.PHONE_NUMBER + " = '%s', "
+                + Contact.ADDRESS + " = '%s', "
+                + Contact.WEB_ADDRESS + " = '%s', "
+                + Contact.NOTES + " = '%s' "
                 + "WHERE id = %d",
                 contact.getFirstName(),
                 contact.getLastName(),

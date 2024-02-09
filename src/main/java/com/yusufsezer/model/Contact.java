@@ -5,8 +5,8 @@ import java.io.Serializable;
 public class Contact implements Serializable {
 
     public final static String ID = "id";
-    public final static String FIRST_NAME = "firstname";
-    public final static String LAST_NAME = "lastname";
+    public final static String FIRST_NAME = "firstName";
+    public final static String LAST_NAME = "lastName";
     public final static String EMAIL = "email";
     public final static String PHONE_NUMBER = "phoneNumber";
     public final static String ADDRESS = "address";
