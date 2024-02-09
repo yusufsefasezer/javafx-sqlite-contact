@@ -4,7 +4,7 @@ A simple SQLite contact list application developed with FX and Java.
 
 This project developed with Java Generics, Java FX, SQLite.
 
-The Java FX SQLite Contact is an innovative and efficient contact list application developed using Java FX and SQLite. This project leverages the power of Java Generics, Java FX, and SQLite to provide a flawless experience for managing contacts. Through its intuitive graphical user interface (GUI), users can easily create, update, delete, and search for contacts.
+The Java FX SQLite Contact is an innovative and efficient contact list application developed using Java FX and SQLite. This project leverages the power of Java Generics, Java FX, and SQLite to provide a flawless experience for managing contacts. Through its intuitive graphical user interface (GUI), users can easily create, update, and delete for contacts.
 
 One of the key features of this application is its seamless integration of JavaFX and SQLite. By utilizing the JavaFX SQLite API, the application ensures efficient data management by creating a smooth communication channel between the JavaFX user interface and the underlying SQLite database. This integration enables swift data retrieval and manipulation, providing users with real-time updates on their contact list.
 
