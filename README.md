@@ -1,4 +1,5 @@
 # Java FX SQLite Contact
+
 A simple SQLite contact list application developed with FX and Java.
 
 This project developed with Java Generics, Java FX, SQLite.
@@ -13,8 +14,18 @@ The application's primary focus is on providing a user-friendly and visually app
 
 This JavaFX application also serves as a valuable example for developers looking for guidance on building their own contact list applications. The meticulously crafted codebase showcases best practices in implementing JavaFX components, handling user input, and effectively utilizing Java Generics to create a flexible and scalable solution.
 
-
 ## [Download](https://github.com/yusufsefasezer/javafx-sqlite-contact/archive/master.zip)
+
+## How to run
+
+Maven must be installed to run this application.
+
+You can use the following commands to generate a Jar file.
+
+```
+mvn package
+java -jar target\javafx-sqlite-contact.jar
+```
 
 ## Screenshot
 
