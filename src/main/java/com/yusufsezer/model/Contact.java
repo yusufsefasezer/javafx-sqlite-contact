@@ -4,100 +4,119 @@ import java.io.Serializable;
 
 public class Contact implements Serializable {
 
-	public int id;
-	public String firstName;
-	public String lastName;
-	public String email;
-	public String phoneNumber;
-	public String address;
-	public String webAddress;
-	public String notes;
+    public final static String ID = "id";
+    public final static String FIRST_NAME = "firstname";
+    public final static String LAST_NAME = "lastname";
+    public final static String EMAIL = "email";
+    public final static String PHONE_NUMBER = "phoneNumber";
+    public final static String ADDRESS = "address";
+    public final static String WEB_ADDRESS = "webAddress";
+    public final static String NOTES = "notes";
 
-	public Contact(int id,
-					String firstName,
-					String lastName,
-					String email,
-					String phoneNumber,
-					String address,
-					String webAddress,
-					String notes) {
-		this.id = id;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.email = email;
-		this.phoneNumber = phoneNumber;
-		this.address = address;
-		this.webAddress = webAddress;
-		this.notes = notes;
-	}
+    public int id;
+    public String firstName;
+    public String lastName;
+    public String email;
+    public String phoneNumber;
+    public String address;
+    public String webAddress;
+    public String notes;
 
-	public int getId() {
-		return id;
-	}
+    public Contact() {
+    }
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public Contact(int id, String firstName, String lastName, String email,
+            String phoneNumber, String address, String webAddress, String notes) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.address = address;
+        this.webAddress = webAddress;
+        this.notes = notes;
+    }
 
-	public String getFirstName() {
-		return firstName;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public String getLastName() {
-		return lastName;
-	}
+    public String getFirstName() {
+        return firstName;
+    }
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
-	public String getEmail() {
-		return email;
-	}
+    public String getLastName() {
+        return lastName;
+    }
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
-	public String getPhoneNumber() {
-		return phoneNumber;
-	}
+    public String getEmail() {
+        return email;
+    }
 
-	public void setPhoneNumber(String phoneNumber) {
-		this.phoneNumber = phoneNumber;
-	}
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
-	public String getAddress() {
-		return address;
-	}
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
 
-	public void setAddress(String address) {
-		this.address = address;
-	}
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
 
-	public String getWebAddress() {
-		return webAddress;
-	}
+    public String getAddress() {
+        return address;
+    }
 
-	public void setWebAddress(String webAddress) {
-		this.webAddress = webAddress;
-	}
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
-	public String getNotes() {
-		return notes;
-	}
+    public String getWebAddress() {
+        return webAddress;
+    }
 
-	public void setNotes(String notes) {
-		this.notes = notes;
-	}
+    public void setWebAddress(String webAddress) {
+        this.webAddress = webAddress;
+    }
 
-	@Override
-	public String toString() {
-		return firstName + " " + lastName;
-	}
+    public String getNotes() {
+        return notes;
+    }
+
+    public void setNotes(String notes) {
+        this.notes = notes;
+    }
+
+    @Override
+    public String toString() {
+        return firstName + " " + lastName;
+    }
+
+    public static Contact of(String firstName, String lastName, String email,
+            String phoneNumber, String address, String webAddress, String notes) {
+        Contact newContact = new Contact();
+        newContact.setFirstName(firstName);
+        newContact.setLastName(lastName);
+        newContact.setEmail(email);
+        newContact.setPhoneNumber(phoneNumber);
+        newContact.setAddress(address);
+        newContact.setWebAddress(webAddress);
+        newContact.setNotes(notes);
+        return newContact;
+    }
 
 }
